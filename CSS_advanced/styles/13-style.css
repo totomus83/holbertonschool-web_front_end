@@ -24,11 +24,11 @@ a {
 
     text-decoration: none;
   }
-  a:link {
+
+a:link {
     color: var(--text-color);
 
     text-decoration: none;
-
 }
 
 a:visited {
@@ -42,6 +42,7 @@ a:hover {
 a:active {
     background-color: var(--color-light-grey);
 }
+
 .visually-hidden {
   display: none;
 }
