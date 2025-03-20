@@ -65,7 +65,7 @@ a {
   --line-height-big: 1.8;
 
   --section-header-align: center;
-  --section-tagline-transform: uppercase,
+  --section-tagline-transform: uppercase;
 }
 
 h1, h2, h3, h4, h5, h6 {
