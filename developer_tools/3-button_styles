@@ -9,3 +9,4 @@ vertical-align: middle;
 user-select: none;
 background-color: transparent;
 border: 0.125rem solid transparent;
+line-height: 1.5;
