@@ -2,3 +2,4 @@ color: #f8f9fa;
 border-color: #f8f9fa;
 padding: 1rem 1.75rem;
 font-size: 1.25rem;
+display: inline-block;
