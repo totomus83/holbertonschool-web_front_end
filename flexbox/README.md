@@ -21,4 +21,5 @@ Useful Ressources:
     Flexbox Froggy - A game for learning CSS flexbox: https://flexboxfroggy.com/#fr
     Flexbox Defense: http://www.flexboxdefense.com
     Flexbox Cheatsheet: https://yoksel.github.io/flex-cheatsheet/
+     flex-direction - CSS: Cascading Style Sheets | MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/flex-direction
     
