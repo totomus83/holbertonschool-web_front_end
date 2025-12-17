@@ -192,7 +192,7 @@
     text-align: center;
     display: flex;
   }
-  
+
   .nav .nav-item {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
@@ -200,9 +200,9 @@
     letter-spacing: var(--nav-item-letter-spacing);
   }
 
-  .nav-item + .nav-item {
-    margin: var(--nav-item-margin); /* 1er item n’a pas de margin à gauche */
-}
+  .nav .nav-item + .nav-item {
+    margin: var(--nav-item-margin);
+  }
   
   .nav .nav-link {
     display: block;
