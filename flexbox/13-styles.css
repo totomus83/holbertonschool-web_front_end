@@ -567,7 +567,8 @@
   /* Post Meta
     ============================= */
 
-  .post-meta-lis {
+  .post-meta-list {
+    display: flex;
     flex-direction: column;
   }
 
@@ -608,3 +609,5 @@
   .tag-list li:last-child::after {
     content: "";
   }
+
+
