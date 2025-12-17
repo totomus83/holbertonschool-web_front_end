@@ -502,7 +502,7 @@
 
   [class*='col-'] {
     margin: 1rem;
-    padding: none;
+    padding: 0;
   }
 
   ul.row {
