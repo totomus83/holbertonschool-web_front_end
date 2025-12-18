@@ -712,7 +712,7 @@ ul.row {
   /* Form group
 ============================= */
 
-.form-groups {
+.form-group {
     padding: 1rem;
     margin: 0;
     background-color: var(--color-white);
