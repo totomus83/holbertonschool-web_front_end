@@ -718,7 +718,7 @@ ul.row {
     background-color: var(--color-white);
   }
 
-  .focus-within {
+  .form-group:focus-within {
     background-color: var(--color-light-grey);
     transition: .3s;
   }
