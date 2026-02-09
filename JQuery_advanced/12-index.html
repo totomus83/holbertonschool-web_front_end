@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Task 12</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+<script type="application/javascript">
+
+    // Affiche un post dans la page avec bouton delete
+    function addPostRow(data) {
+        const p = $('<p></p>').attr('id', 'row-' + data.id);
+
+        // Span delete avant les infos
+        const deleteSpan = $('<span></span>').text('(delete) ').css('cursor', 'pointer');
+        deleteSpan.click(function() {
+            deletePost(data.id);
+        });
+
+        const infoSpan = $('<span></span>').text(
+            'Post created with id ' +
+            data.id +
+            ', title: ' +
+            data.title +
+            ', author: ' +
+            data.author
+        );
+
+        p.append(deleteSpan, infoSpan);
+        $('body').append(p);
+    }
+
+    // Liste tous les posts existants
+    function listPosts() {
+        $.get('http://localhost:3000/posts')
+            .done(function(response) {
+                response.forEach(function(post) {
+                    addPostRow(post);
+                });
+            })
+            .fail(function() {
+                alert('Server Error');
+            });
+    }
+
+    // Crée le formulaire pour ajouter un post
+    function buildForm() {
+        const form = $('<form></form>');
+
+        const authorDiv = $('<div></div>').append(
+            $('<label for="author">Author</label>'),
+            $('<input type="text" id="author">')
+        );
+
+        const titleDiv = $('<div></div>').append(
+            $('<label for="title">Title</label>'),
+            $('<textarea id="title"></textarea>')
+        );
+
+        const submit = $('<input type="submit" value="Submit">');
+
+        form.append(authorDiv, titleDiv, submit);
+        $('body').append(form);
+
+        // Submit du formulaire
+        form.submit(function(e) {
+            sendForm(e);
+        });
+    }
+
+    // Envoie un nouveau post au serveur
+    function sendForm(e) {
+        e.preventDefault();
+
+        $('form').after('About to send the query to the API');
+
+        const data = {
+            title: $('#title').val(),
+            author: $('#author').val()
+        };
+
+        $.ajax({
+            url: 'http://localhost:3000/posts',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify(data),
+            success: function(response) {
+                addPostRow(response);
+            },
+            error: function() {
+                alert('Error sending the POST query');
+            }
+        });
+    }
+
+    // Supprime un post
+    function deletePost(id) {
+        $.ajax({
+            url: 'http://localhost:3000/posts/' + id,
+            method: 'DELETE',
+            success: function() {
+                $('#row-' + id).remove();
+            },
+            error: function() {
+                alert('Post was not deleted');
+            }
+        });
+    }
+
+    // Initialisation au chargement
+    $(document).ready(function() {
+        listPosts();
+        buildForm();
+    });
+
+</script>
+
+</body>
+</html>
