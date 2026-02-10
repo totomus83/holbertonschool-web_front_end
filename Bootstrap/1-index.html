@@ -10,67 +10,58 @@
     </head>
     <body>
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-lg-3 p-2 text-center text-white bg-primary">Primary</div>
-                <div class="col-12 col-lg-3 p-2 text-center text-white bg-success">Success</div>
-                <div class="col-12 col-lg-3 p-2 text-center text-white bg-danger">Danger</div>
-                <div class="col-12 col-lg-3 p-2 text-center text-white bg-warning">Warning</div>
-            </div>
+        <div class="d-flex flex-column flex-lg-row">
+            <div class="p-2 text-center text-white bg-primary flex-fill">Primary</div>
+            <div class="p-2 text-center text-white bg-success flex-fill">Success</div>
+            <div class="p-2 text-center text-white bg-danger flex-fill">Danger</div>
+            <div class="p-2 text-center text-white bg-warning flex-fill">Warning</div>
         </div>
 
         <hr />
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-primary">Primary</div>
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-success">Success</div>
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-danger">Danger</div>
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-warning">Warning</div>
-            </div>
+        <div class="d-flex flex-column flex-sm-row">
+            <div class="p-2 text-center text-white bg-primary flex-fill">Primary</div>
+            <div class="p-2 text-center text-white bg-success flex-fill">Success</div>
+            <div class="p-2 text-center text-white bg-danger flex-fill">Danger</div>
+            <div class="p-2 text-center text-white bg-warning flex-fill">Warning</div>
         </div>
 
         <hr />
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-lg-2 p-2 text-center text-white bg-primary">Primary</div>
-                <div class="col-12 col-lg-4 p-2 text-center text-white bg-success">Success</div>
-                <div class="col-12 col-lg-6 p-2 text-center text-white bg-danger">Danger</div>
-            </div>
+        <div class="d-flex flex-column flex-lg-row">
+            <div class="p-2 text-center text-white bg-primary flex-fill">Primary</div>
+            <div class="p-2 text-center text-white bg-success flex-grow-2">Success</div>
+            <div class="p-2 text-center text-white bg-danger flex-grow-3">Danger</div>
         </div>
 
         <hr />
 
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-primary order-xl-1 order-lg-2 order-md-3 order-4">Primary</div>
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-success order-xl-2 order-lg-3 order-md-4 order-1">Success</div>
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-danger order-xl-3 order-lg-4 order-md-1 order-2">Danger</div>
-                <div class="col-12 col-sm-3 p-2 text-center text-white bg-warning order-xl-4 order-lg-1 order-md-2 order-3">Warning</div>
-            </div>
+        <div class="d-flex flex-column flex-md-row">
+            <div class="p-2 text-center text-white bg-primary order-xl-1 order-lg-2 order-md-3 order-4">Primary</div>
+
+            <div class="p-2 text-center text-white bg-success order-xl-2 order-lg-3 order-md-4 order-1">Success</div>
+
+            <div class="p-2 text-center text-white bg-danger order-xl-3 order-lg-4 order-md-1 order-2">Danger</div>
+
+            <div class="p-2 text-center text-white bg-warning order-xl-4 order-lg-1 order-md-2 order-3">Warning</div>
         </div>
 
         <hr/>
 
-        <div class="container-fluid">
-            <div class="row justify-content-between">
-                <div class="col-12 col-md-2 p-2 text-center text-white bg-primary">Primary</div>
-                <div class="col-12 col-md-2 p-2 text-center text-white bg-success">Success</div>
-            </div>
+        <div class="d-flex flex-column flex-md-row justify-content-between">
+            <div class="p-2 text-center text-white bg-primary" style="flex-basis:16%">Primary</div>
+            <div class="p-2 text-center text-white bg-success" style="flex-basis:16%">Success</div>
         </div>
 
         <hr/>
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-12 col-md-2 p-2 text-center text-white bg-primary">Primary</div>
-            <div class="d-none d-md-block col-md-4"></div>
-            <div class="col-12 col-md-2 p-2 text-center text-white bg-success">Success</div>
-            <div class="d-none d-md-block col-md-2"></div>
-            <div class="col-12 col-md-2 p-2 text-center text-white bg-danger">Danger</div>
-          </div>
+        <div class="d-flex flex-column flex-md-row">
+            <div class="p-2 text-center text-white bg-primary" style="flex-basis:16%">Primary</div>
+            <div class="flex-grow-2"></div>
+            <div class="p-2 text-center text-white bg-success" style="flex-basis:16%">Success</div>
+            <div class="flex-grow-1"></div>
+            <div class="p-2 text-center text-white bg-danger" style="flex-basis:16%">Danger</div>
         </div>
-      </div>
+
     </body>
 </html>
